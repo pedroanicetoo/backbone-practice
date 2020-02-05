@@ -7,7 +7,8 @@ class Raffler.Routers.Entries extends Backbone.Router
     @collection = new Raffler.Collections.Entries()
     console.log "Router before fetch"
     console.log @collection
-    @collection.fetch()
+    @collection.fetch
+      async: false
     console.log "Router after fetch"
     console.log @collection
     
